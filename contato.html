@@ -2,6 +2,17 @@
 
 <html lang="pt-br">
 <head>
+    <script>
+        var dataLayer = window.datalayer || [] ;
+   
+    </script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXRKL6N');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Contato | Bikcraft </title>
@@ -17,6 +28,10 @@
 
 
 <body id="contato">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRKL6N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header-bg">
         <div class="header container">
             <a href="./">
@@ -87,9 +102,10 @@
                         <label for="name">Mensagem</label>
                         <textarea rows="5" id="mensagem" name="mensagem" placeholder="o que você precisa?"></textarea>
                     </div>
-                    <button class="button">Enviar mensagem</button>
-            </form>
-            </section>
+                    <button class="button form">Enviar mensagem</button>        
+                   </form>
+                   
+                </section>
     </div>
     </main>
 
@@ -121,31 +137,6 @@
             <p class="lojas-dados">08-18h seg à dom </p>
         </div>
     </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer class="footer-bg">
         <div class="footer container">
@@ -184,9 +175,24 @@
             </div>
             <p class="footer-copy font-2-m cor-6">Bikcraft |Alguns direitos reservados</p>
         </div>
-
+        
     </footer>
+   
 </body>
+
+        <script type="text/javascript">
+        dataLayer.push({event:'ga4_event',event_name:'pageview',page_location:'Contato',page_referrer:'hOME'});
+        document.querySelector('.button').addEventListener('mouseenter', function(event){
+            event.preventDefault();
+            dataLayer.push({event:'ga4_event',event_name:'generate_lead',value:'envio_form'})
+        })
+        document.querySelector('.footer-bg').addEventListener('mouseenter', function(event){
+            dataLayer.push({event:'ga4_event',event_name:'scroll',percent:"90%"})
+        })
+        document.querySelector('.contato-formulario').addEventListener('mouseenter', function(event){
+            dataLayer.push({event:'ga4_event',event_name:'form_interaction',step:'1',erros:'filtrar'})
+        })
+       </script>
  
 
 </html>

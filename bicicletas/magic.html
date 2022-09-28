@@ -2,6 +2,13 @@
 
 <html lang="pt-br">
 <head>
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXRKL6N');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Termos e Condições | Bikcraft </title>
@@ -17,6 +24,10 @@
 
 
 <body id="bicicleta">
+       <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRKL6N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header-bg">
         <div class="header container">
             <a href="./">
@@ -25,9 +36,9 @@
 
         <nav aria-label="primaria">
             <ul class="header-menu font-1-m">
-                <li><a href="./bicicletas.html" > Bicicletas </a></li>
-                <li><a href="./seguros.html" > Seguros </a></li>
-                <li><a href="./contato.html" > Contato </a></li>
+                <li><a href="../bicicletas.html" > Bicicletas </a></li>
+                <li><a href="../seguros.html" > Seguros </a></li>
+                <li><a href="../contato.html" > Contato </a></li>
             </ul>
         </nav>
         </div>
@@ -92,7 +103,7 @@
     <article class="biciletas-lista">
         <h2 class=' container font-1-xxl'>escolha a sua<span class="cor-p1">.</span></h2>
        
-        <ul>
+        <ul class="lista_bike">
            <li>
                <a href="./nimbus.html">
                <img src="../img/bicicletas/nimbus.jpg" alt="Bicicleta preta">
@@ -120,7 +131,7 @@
                 <div class="seguro-conteudo">
                     <h2 class="font-1-xxl cor-0">Pedale mais tranquilo com nosso <span class="cor-p1">seguro.</span></h2>
                     <p class="font-2-l cor-5">Inscreva-se em um dos planos do nosso seguro Bikcraft e aproveite diversos beneficios</p>
-                    <a class="button" href=".../seguros.html">Conheça mais </a>
+                    <a class="button" id="envio_seguro" href=".../seguros.html">Conheça mais </a>
                </div>
            </div>
        </article>
@@ -190,6 +201,22 @@
 
     </footer>
 </body>
- 
+<script type="text/javascript">
+    dataLayer.push({event:'ga4_event',event_name:'pageview',page_location:'bicicletas',page_referrer:'hOME'});
+    document.querySelector('.footer-bg').addEventListener('mouseenter', function(event){
+        dataLayer.push({event:'ga4_event',event_name:'scroll',percent:"90%"})
+     })
+     document.querySelector('.button').addEventListener('mouseenter', function(event){
+         dataLayer.push({event:'ga4_event',event_name:'add_to_cart',currency:'BRL',value:'5999',item:'magic'})
+     })
+     document.querySelector('#envio_seguro').addEventListener('mouseenter', function(event){
+         dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'conheca_mais_seguro',page_location:'magic',page_referrer:'seguros',item:'magic',user_id:'cliente'})
+     })
+     document.querySelector('.lista_bike').addEventListener('mouseenter', function(event){
+         event.preventDefault();
+         dataLayer.push({event:'ga4_event',event_name:'select_item',item_list_id:'',item_list_name:'lista_nebula',items:'',price:'',discont:'none',position:'0'})
+     })
+   
+   </script>
 
 </html>
