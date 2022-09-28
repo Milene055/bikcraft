@@ -79,7 +79,7 @@
                             Rastreador
                         </li>
                     </ul>
-                    <a class="button seta" href="./bicicletas/nimbus.html">Mais sobre</a>
+                    <a class="button" id="button_nimbus" href="./bicicletas/nimbus.html">Mais sobre</a>
                 </div>
             </div>
       
@@ -111,7 +111,7 @@
                             Rastreador
                         </li>
                     </ul>
-                    <a class="button seta" href="./bicicletas/magic.html">Mais sobre</a>
+                    <a class="button" id="button_magic" href="./bicicletas/magic.html">Mais sobre</a>
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
                             Rastreador
                         </li>
                     </ul>
-                    <a class="button seta" href="./bicicletas/nebula.html">Mais sobre</a>
+                    <a class="button" id="button_nebula" href="./bicicletas/nebula.html">Mais sobre</a>
                 </div>
             </div>
   
@@ -203,6 +203,15 @@
     dataLayer.push({event:'ga4_event',event_name:'pageview',page_location:'bicicletas',page_referrer:'hOME'});
     document.querySelector('.footer-bg').addEventListener('mouseenter', function(event){
         dataLayer.push({event:'ga4_event',event_name:'scroll',percent:"90%"})
+     })
+     document.querySelector('#button_nimbus').addEventListener('mouseenter', function(event){
+         dataLayer.push({event:'ga4_event',event_name:'select_item',item:'nimbus',price:'4.999',position:'1'})
+     })
+     document.querySelector('#button_magic').addEventListener('mouseenter', function(event){
+         dataLayer.push({event:'ga4_event',event_name:'select_item',item:'Magic',price:'2.999',position:'2'})
+     })
+     document.querySelector('#button_nebula').addEventListener('mouseenter', function(event){
+         dataLayer.push({event:'ga4_event',event_name:'select_item',item:'Nebula',price:'4.999',position:''})
      })
      
    

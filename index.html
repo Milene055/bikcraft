@@ -222,21 +222,21 @@
     document.querySelector('.footer-bg').addEventListener('mouseenter', function(event){
         dataLayer.push({event:'ga4_event',event_name:'scroll',percent:"90%"})
      })
-     document.querySelector('.button').addEventListener('mouseenter', function(event){
-         dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'conheca_mais_seguro',page_location:'nimbus',page_referrer:'seguros',item:'nimbus',user_id:'cliente'})
-     })
-     document.querySelector('.lista_bike').addEventListener('mouseenter', function(event){
-         event.preventDefault();
+    document.querySelector('.lista_bike').addEventListener('mouseenter', function(event){
+       event.preventDefault();
          dataLayer.push({event:'ga4_event',event_name:'view_item_list',item_list_id:'',item_list_name:'lista_nimbus',items:'',price:'',discont:'none',position:'0'})
      })
+     document.querySelector('.button').addEventListener('mouseenter', function(event){
+        dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'escolha_a_sua',page_location:'Home',page_referrer:'bicicletas',item:'bikes',user_id:'cliente'})
+    })
      document.querySelector('.link').addEventListener('mouseenter', function(event){
-         dataLayer.push({event:'ga4_event',event_name:'navigation_click',})
+         dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'escolha_um_modelo',page_location:'Home',page_referrer:'bicicletas',item:'bikes',user_id:'cliente'})
      })
      document.querySelector('#seguro').addEventListener('mouseenter', function(event){
-         dataLayer.push({event:'ga4_event',event_name:'navigation_click',})
+         dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'seguro_prata',page_location:'Home',page_referrer:'seguros',item:'bikes',user_id:'cliente'})
      })
      document.querySelector('#seguro_novo').addEventListener('mouseenter', function(event){
-         dataLayer.push({event:'ga4_event',event_name:'navigation_click',})
+         dataLayer.push({event:'ga4_event',event_name:'navigation_click',click_location:'seguro_ouro',page_location:'Home',page_referrer:'seguros',item:'bikes',user_id:'cliente'})
      })
    </script>
 
